@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  pm:
+    image: postgres
+    restart: unless-stopped
+    network_mode: host
+
+    environment:
+      POSTGRES_DB: pmdb
+      POSTGRES_USER: wan
+      POSTGRES_PASSWORD: wan123
+
+    ports:
+      - 5432:5432
